@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1 Năm Gặp Nhau ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #ffe0ec, #ffe6f0);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: url('https://i.imgur.com/VzZzOjR.png') no-repeat center/cover;
+      color: white;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3em;
+      font-family: 'Pacifico', cursive;
+      animation: fadeIn 2s ease;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+        header p {
+    font-size: 1.4em;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .timeline {
+      border-left: 3px solid #ff5e9c;
+      padding-left: 20px;
+    }
+    .timeline div {
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .timeline div::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: #ff5e9c;
+      border-radius: 50%;
+      position: absolute;
+      left: -27px;
+      top: 5px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .letter {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 1.1em;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes heartFloat {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-200px) scale(1.5); opacity: 0; }
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: heartFloat 4s ease-in infinite;
+      top: 80%;
+      left: 50%;
+    }
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tròn 1 năm mình gặp nhau ❤️</h1>
+    <p>09.07.2024 - 09.07.2025</p>
+    <div id="hearts-container"></div>
+  </header>
+
+  <section class="timeline">
+    <h2>📅 Hành trình yêu thương</h2>
+    <div>
+      <strong>09.07.2024:</strong> Mình gặp nhau lần đầu tiên ở server discord "Garena Liên Quân Mobile" =))
+    </div>
+    <div>
+      <strong>12.07.2024:</strong> Bị abe dụ dỗ đưa facebook >:< mà lúc đó hong nghĩ nhìu nên đưa facebook riu lun ><</m>
+    </div>
+    <div>
+      <strong>18.08.2024</strong> Lời tỏ tình đầu tiên 💕 Chính thức ở bên nhau :333.
+    </div>
+    <div>
+      <strong>14.02.2025:</strong> Valentine đầu tiên 💕
+    </div>
+    <div>
+      <strong>09.07.2025:</strong> Kỷ niệm 1 năm gặp nhau 🎉
+    </div>
+  </section>
+
+  <section>
+    <h2>📸 Những khoảnh khắc</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/YOUR_IMAGE1.jpg" alt="">
+      <img src="https://i.imgur.com/YOUR_IMAGE2.jpg" alt="">
+      <img src="https://i.imgur.com/YOUR_IMAGE3.jpg" alt="">
+      <img src="https://i.imgur.com/YOUR_IMAGE4.jpg" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h2>💌 Gửi đến người tớ yêu</h2>
+    <div class="letter">
+      Anh ơi,
+
+      Cảm ơn anh đã đến, đã ở lại và đã yêu ebe thật dịu dàng :3
+      1 năm trôi qua thật nhanh, nhưng ebe vẫn nhớ như in từng khoảnh khắc nhỏ mình bên nhau.
+
+      Ebe hy vọng sau trang web này sẽ còn rất nhiều năm nữa để kể tiếp câu chuyện của chúng mình.
+
+      Yêu abe nhìu ❤️
+    </div>
+  </section>
+
+  <footer>
+    Made with love by Tú • 1 year of us 💞
+  </footer>
+
+  <script>
+    const heartContainer = document.getElementById('hearts-container');
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (2 + Math.random() * 2) + 's';
+      heartContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 4000);
+    }, 300);
+  </script>
+</body>
+</html>
